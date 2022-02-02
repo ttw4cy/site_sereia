@@ -948,6 +948,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <body id="page-top" class="index">
   
+  
+  
+  
+  
   <script>
 (function(tn, tc, cn, sn) {
   window[tn] = window[tn] || {
@@ -978,6 +982,21 @@ window["tracker"].send("pageview", {
   'cd1': 'Source Code'
 });
 </script>
+  
+ //Exercicio 1 x
+  <script>  
+  document.addEventListener('scroll', function() {
+    if(window.scrollY==document.body.scrollHeight - window.innerHeight) 
+    tracker.send ('event', {
+    'category': 'Contagem-Rolada',
+    'action': 'scroll',
+    'label': 'Rolou ate o final',
+    "cd1": 'Source code'
+    
+    })
+
+})
+  </script>
   
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWPM36V"
