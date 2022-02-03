@@ -998,6 +998,23 @@ window["tracker"].send("pageview", {
 })
   </script>
   
+  //Exercicio 2x
+  <script>
+    
+   document.addEventListener('scroll', function() {
+    if(window.scrollY==document.body.scrollHeight - window.innerHeight) 
+    tracker.send ('event', {
+    'category': 'View-contact',
+    'action': 'scroll',
+    'label': 'Visualizou Contato',
+    "cd1": 'Source code'
+    
+    })
+
+})
+    
+  </script>
+  
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWPM36V"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
