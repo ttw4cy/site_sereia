@@ -1015,6 +1015,22 @@ window["tracker"].send("pageview", {
     
   </script>
   
+  
+  //Exercicio 3
+  <script>
+   
+    document.querySelector(".col-md-6").addEventListener('input', function (i) {
+    tracker.send ('event',{
+    'category': 'Preenchimento-contato',
+    'action': 'input',
+    'label': 'Preencheu contato',
+    'cd1':i.target.getAttribute("id"),
+    'cd2': 'Source code'
+})
+}, {once: true})
+    
+  </script>
+  
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWPM36V"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
