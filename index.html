@@ -1030,6 +1030,7 @@ window["tracker"].send("pageview", {
 }, {once: true})
     
   </script>
+  
   //Exercicio 4 
   <script>
    
@@ -1064,6 +1065,27 @@ tracker.send ('event', {
 
   </script>
 
+  //Exercicio 5
+  <script>
+    document.querySelectorAll('nav a.page-scroll').forEach((i)=> {
+i.addEventListener('click', (evt) => {
+    tracker.send('event', {
+        category: 'View-topo',
+        action: 'click',
+        label: 'visualizacao topo',
+        cd1: 'Tag Name',
+        cd2: 'Source code',
+        cd3: evt.target.innerText
+
+})
+
+})
+
+})
+    
+  </script>
+  
+  
 
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWPM36V"
