@@ -1030,7 +1030,41 @@ window["tracker"].send("pageview", {
 }, {once: true})
     
   </script>
-  
+  //Exercicio 4 
+  <script>
+   
+    document.querySelector('button.btn.btn-xl').addEventListener('click', function(){
+
+let invalidName = document.querySelector('.form-control#name').getAttribute('aria-invalid');
+
+let invalidEmail = document.querySelector('.form-control#email').getAttribute('aria-invalid');
+
+let invalidPhone = document.querySelector('.form-control#phone').getAttribute('aria-invalid');
+
+let invalidMessage = document.querySelector('.form-control#message').getAttribute('aria-invalid');
+
+
+if (invalidName == 'false' && invalidEmail == 'false' && invalidPhone == 'false' && invalidMessage == 'false') {
+    mensagem = 'Sucesso'
+    console.log("Sucesso")
+} 
+else {
+    mensagem = 'Falha'
+    console.log("Sucesso")
+};
+
+tracker.send ('event', {
+    'category': 'resultado-contato',
+    'action': 'click',
+    'label': 'resultado do formulario contato',
+    'cd2': 'Source code',
+    'cd1': mensagem
+    })
+},)
+
+  </script>
+
+
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWPM36V"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
