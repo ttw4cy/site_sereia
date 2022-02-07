@@ -998,7 +998,7 @@ window["tracker"].send("pageview", {
 })
   </script>
   
-  //Exercicio 2x
+  //Exercicio 2
   <script>
     
    document.addEventListener('scroll', function() {
@@ -1085,6 +1085,35 @@ i.addEventListener('click', (evt) => {
     
   </script>
   
+  //Exercicio 6 
+
+  <script>
+  document.querySelectorAll('ul.social-buttons').forEach((ii) => {
+ ii.addEventListener('click', (evt) => {
+    if (evt.target.tagName === 'A' || evt.target.tagName === 'I') {
+        let socialMedia = evt.target.closest('li').querySelector('i').className.split ('-')[1];
+        let divContainer = evt.currentTarget.closest('div');
+        let id = 'Site';
+    if (divContainer.className === 'team-member'){
+        let name = divContainer.querySelector('h4').innerText;
+        id = 'member: ' + name
+}
+
+    tracker.send ('event', {
+        'category': 'Social Media',
+        'action': 'click',
+        'label': socialMedia,
+        'cd1': 'Tag Name',
+        'cd2': id,
+        'cd3': 'Source code'
+})
+
+
+}
+})
+})
+  
+  </script>
   
 
   <!-- Google Tag Manager (noscript) -->
