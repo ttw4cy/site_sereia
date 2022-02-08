@@ -1115,6 +1115,22 @@ i.addEventListener('click', (evt) => {
   
   </script>
   
+// Exercicio 7
+<script>
+
+document.addEventListener('DOMCOntentLoad', function() {
+setTimeout(() => {
+    tracker.send('event', {
+        'category': 'Tempo Pagina',
+        'action': 'Tempo na pagina mais que 1 minuto',
+        'label': 'Ficou mais de um minuto',
+        'cd1': 'Source code'
+})
+},60000)
+})
+
+</script>
+
 
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWPM36V"
